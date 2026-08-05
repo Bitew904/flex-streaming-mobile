@@ -1,0 +1,98 @@
+{
+  "expo": {
+    "name": "Flex Streaming",
+    "slug": "flex-streaming",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/images/icon.png",
+    "scheme": "flexstreaming",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0A0A"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.flexstreaming.app",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ],
+        "NSPhotoLibraryUsageDescription": "Allow access to your media library to play local videos and music.",
+        "NSMicrophoneUsageDescription": "Microphone access may be needed for voice features.",
+        "UISupportsPictureInPicture": true
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#0A0A0A"
+      },
+      "package": "com.flexstreaming.app",
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_MEDIA_VIDEO",
+        "READ_MEDIA_AUDIO",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+        "WAKE_LOCK",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_MEDIA_LOCATION"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-av",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow Flex Streaming to access your photos and videos.",
+          "savePhotosPermission": "Allow Flex Streaming to save media.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "react-native-video",
+        {
+          "enableAndroidPictureInPicture": true,
+          "enableBackgroundAudio": false,
+          "androidExtensions": {
+            "useExoplayerDash": true,
+            "useExoplayerHls": true,
+            "useExoplayerRtsp": true,
+            "useExoplayerSmoothStreaming": true
+          }
+        }
+      ],
+      [
+        "@spreen/ffmpeg-kit-react-native-config",
+        {
+          "package": "https",
+          "ios": {
+            "package": "https"
+          }
+        }
+      ],
+      "expo-asset",
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "53359821-d5f5-49f6-b5a0-f8951400ef2f"
+      }
+    },
+    "owner": "bitew"
+  }
+}
