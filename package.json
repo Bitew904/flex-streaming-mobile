@@ -31,6 +31,7 @@
     "expo-secure-store": "~15.0.8",
     "expo-sharing": "~14.0.8",
     "expo-splash-screen": "~31.0.13",
+    "expo-sqlite": "~16.0.10",
     "expo-status-bar": "~3.0.9",
     "expo-system-ui": "~6.0.9",
     "expo-video-metadata": "~1.4.0",
@@ -47,6 +48,7 @@
     "react-native-sqlite-storage": "^6.0.1",
     "react-native-video": "^6.9.0",
     "react-native-web": "^0.21.0",
+    "react-native-worklets": "0.5.1",
     "zustand": "^5.0.0"
   },
   "devDependencies": {
