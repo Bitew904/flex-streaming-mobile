@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Flex Streaming",
-    "slug": "flex-streaming",
+    "slug": "flex-streaming-v1",
     "version": "1.0.0",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
@@ -43,7 +43,11 @@
         "android.permission.MODIFY_AUDIO_SETTINGS",
         "android.permission.READ_EXTERNAL_STORAGE",
         "android.permission.WRITE_EXTERNAL_STORAGE",
-        "android.permission.ACCESS_MEDIA_LOCATION"
+        "android.permission.ACCESS_MEDIA_LOCATION",
+        "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.READ_MEDIA_AUDIO"
       ]
     },
     "plugins": [
@@ -70,15 +74,6 @@
           }
         }
       ],
-      [
-        "@spreen/ffmpeg-kit-react-native-config",
-        {
-          "package": "https",
-          "ios": {
-            "package": "https"
-          }
-        }
-      ],
       "expo-asset",
       "expo-font"
     ],
@@ -90,7 +85,7 @@
         "origin": false
       },
       "eas": {
-        "projectId": "53359821-d5f5-49f6-b5a0-f8951400ef2f"
+        "projectId": "1dd6521a-f0a5-44c5-b92c-55e80b1db72b"
       }
     },
     "owner": "bitew"
